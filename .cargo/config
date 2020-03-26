@@ -1,0 +1,11 @@
+[target.thumbv7em-none-eabi]
+runner = 'arm-none-eabi-gdb'
+rustflags = [
+  "-C", "link-arg=-Tstm32mp1_mcu.ld",
+  "-C", "linker=arm-none-eabi-ld",
+  "-C", "linker-flavor=ld",
+  "-Z", "thinlto=no",
+]
+
+[build]
+target = "thumbv7em-none-eabi"

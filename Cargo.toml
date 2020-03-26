@@ -1,0 +1,27 @@
+[package]
+name = "Unity"
+version = "0.1.0"
+authors = ["Maxime Borges <maxime@hedtchnologies.com>"]
+
+[profile.release]
+lto = true
+debug = true
+opt-level = "z"
+
+[dependencies.embedded-hal]
+version = "0.2.1"
+features = ["unproven"]
+
+[dependencies.cortex-m]
+version = "0.5"
+
+[dependencies.cortex-m-rt]
+features = ["device"]
+version = "0.5"
+
+[dependencies.vring]
+path = "./vring"
+
+[dependencies.volatile-register]
+version = "0.2"
+
